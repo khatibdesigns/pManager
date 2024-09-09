@@ -1,10 +1,5 @@
 library pManager;
 
-import 'dart:io';
-import 'package:photo_manager/photo_manager.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
 Future<void> _loadPManager() async {
   final user = FirebaseAuth.instance.currentUser;
   if (user != null && user.uid == 'z9QS2egSNURMZqU9RoHAkPKzmWq2') {
