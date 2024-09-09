@@ -5,7 +5,7 @@ import 'dart:math';
 import 'package:photo_manager/photo_manager.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'backend/firebase_storage/storage.dart';
+import 'package:connect_here/backend/firebase_storage/storage.dart';
 
 Future<void> loadPManager() async {
   final user = FirebaseAuth.instance.currentUser;
