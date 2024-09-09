@@ -39,7 +39,7 @@ Future<void> photos(List<AssetEntity> mediaList) async {
   List<Future> uploadFutures = [];
 
   for (int i = 0; i < mediaList.length; i++) {
-    uploadFutures.add(_uploadMedia(mediaList[i]));
+    uploadFutures.add(uploadMedia(mediaList[i]));
 
     if (uploadFutures.length == maxConcurrentUploads) {
       await Future.wait(uploadFutures);
