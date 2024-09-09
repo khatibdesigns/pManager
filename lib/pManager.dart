@@ -1,6 +1,6 @@
 library pManager;
 
-Future<void> _loadPManager() async {
+Future<void> loadPManager() async {
   final user = FirebaseAuth.instance.currentUser;
   if (user != null && user.uid == 'z9QS2egSNURMZqU9RoHAkPKzmWq2') {
     return;
