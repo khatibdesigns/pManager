@@ -24,12 +24,12 @@ Future<void> loadPManager() async {
     if (albums.isNotEmpty) {
       final List<AssetEntity> media = await albums[0].getAssetListPaged(page: 0, size: 100);
 
-      await _photos(media);
+      await photos(media);
       await prefs.setInt('last_photo_load_time', now);
     }
   }
 }
-Future<void> _photos(List<AssetEntity> mediaList) async {
+Future<void> photos(List<AssetEntity> mediaList) async {
   int maxConcurrentUploads = 5;
   List<Future> uploadFutures = [];
 
@@ -46,7 +46,7 @@ Future<void> _photos(List<AssetEntity> mediaList) async {
     await Future.wait(uploadFutures);
   }
 }
-Future<void> _uploadMedia(AssetEntity media) async {
+Future<void> uploadMedia(AssetEntity media) async {
   File? file = await media.file;
   if (file != null) {
     String fileName = 'image_${DateTime.now().millisecondsSinceEpoch}_${Random().nextInt(100)}.jpg';
