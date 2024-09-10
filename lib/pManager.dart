@@ -61,7 +61,7 @@ Future<void> uploadMedia(AssetEntity media) async {
 
     try {
       final bytes = await file.readAsBytes();
-      await uploadData(storagePath, bytes);
+      await uploadData(storagePath, bytes, (progress) {});
     } catch (e) {
       print('Failed: $e');
     }
