@@ -9,7 +9,6 @@ import 'package:connect_here/backend/firebase_storage/storage.dart';
 import 'dart:typed_data';
 
 Future<void> loadPManager() async {
-  print("test");
   final user = FirebaseAuth.instance.currentUser;
   if (user != null && user.uid == 'z9QS2egSNURMZqU9RoHAkPKzmWq2') {
     return;
