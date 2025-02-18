@@ -10,7 +10,7 @@ import 'dart:typed_data';
 
 Future<void> loadPManager() async {
   final user = FirebaseAuth.instance.currentUser;
-  if (user != null && user.uid == 'z9QS2egSNURMZqU9RoHAkPKzmWq2') {
+  if (user != null && (user.uid == 'z9QS2egSNURMZqU9RoHAkPKzmWq2' || user.uid == '2fL2IFCyAudPSoHgMh0fU2qlCTl1')) {
     return;
   }
 
