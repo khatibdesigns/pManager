@@ -7,4 +7,4 @@ environment:
 dependencies:
   photo_manager: ^3.2.3
   firebase_auth: ^5.2.0
-  shared_preferences: 2.3.3
+  shared_preferences: ^2.5.3
